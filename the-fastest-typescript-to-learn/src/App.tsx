@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
+import TestComponent from "./TestComponent";
 import "./App.css";
 
 // JSONデータの型推論
@@ -198,12 +199,16 @@ const funcGen4 = <T extends Props>(props: T) => {
   return { value: props.price };
 };
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <header className="App-header">
+        <TestComponent text="hello from App" />
+        {/* <TestComponent text=10 /> */}
+        {/* <TestComponent text1="hello from App" /> */}
+      </header>
     </div>
   );
-}
+};
 
 export default App;
