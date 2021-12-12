@@ -2,6 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+// JSONデータの型推論
+import Data from "./data.json";
+type USERS = typeof Data;
+
 // 明示的に型を決定することをannotationと呼ぶ
 // annotationしなくても型推論で方が決定される
 // VSCODEの場合はホバーで型推論の結果を確認できる
@@ -139,6 +143,60 @@ let comp2: string = comp1;
 // できない
 // let comp3: string = "test";
 // let comp4: "test" = comp3;
+
+// Generics ジェネリックス
+// 型をエイリアスにしておき、実際に使用するときに型を指定する
+interface GEN<T> {
+  item: T;
+}
+const gen0: GEN<string> = { item: "hello" };
+const gen1: GEN<number> = { item: 12 };
+// 型を指定しないとエラー
+// cosnt gen1: GEN = {item:"hello"}
+
+// デフォルトの型を指定できる
+interface GEN1<T = string> {
+  item: T;
+}
+const gen2: GEN1 = { item: "hello" };
+
+// extendsで使用できる型を指定できる
+interface GEN2<T extends string | number> {
+  item: T;
+}
+const gen3: GEN2<string> = { item: "hello" };
+const gen4: GEN2<number> = { item: 12 };
+// const gen5: GEN2<boolean> = { item: true };
+
+function funcGen<T>(props: T) {
+  return { item: props };
+}
+// 型推論
+const gen5 = funcGen("test");
+// const gen5 = funcGen<string>("test");
+const gen6 = funcGen<string | null>(null);
+
+// 関数のextends
+function funcGen1<T extends string | null>(props: T) {
+  return { value: props };
+}
+const gen7 = funcGen1("hello");
+const gen8 = funcGen1(null);
+// const gen9 = funcGen1(10)
+
+interface Props {
+  price: number;
+}
+function funcGen3<T extends Props>(props: T) {
+  return { value: props.price };
+}
+
+const gen10 = funcGen3({ price: 10 });
+// const gen11 = funcGen3({ price: "10" });
+
+const funcGen4 = <T extends Props>(props: T) => {
+  return { value: props.price };
+};
 
 function App() {
   return (
