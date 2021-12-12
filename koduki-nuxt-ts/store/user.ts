@@ -20,7 +20,7 @@ export const mutations = mutationTree(state, {
   store(state, user: UserState) {
     state.id = user.id;
     state.name = user.name;
-    state.name = user.name;
+    state.token = user.token;
     state.pic = user.pic;
   },
   drop(state) {
