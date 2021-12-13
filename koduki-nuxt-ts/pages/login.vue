@@ -23,18 +23,12 @@ export default Vue.extend({
   async asyncData() {},
   methods: {
     async authGoogle() {
-      const auth = new Auth(this.$accessor, {
-        apiKey: "AIzaSyCS_nDOvBzzDCelyYaqYWL8E8xecGJzmZo",
-        authDomain: "koduki-nuxt-ts.firebaseapp.com",
-      });
+      const auth = new Auth(this.$accessor, this.$config.firebase);
       await auth.login(Provider.Google);
       this.$router.push("/");
     },
     async authTwitter() {
-      const auth = new Auth(this.$accessor, {
-        apiKey: "AIzaSyCS_nDOvBzzDCelyYaqYWL8E8xecGJzmZo",
-        authDomain: "koduki-nuxt-ts.firebaseapp.com",
-      });
+      const auth = new Auth(this.$accessor, this.$config.firebase);
       await auth.login(Provider.Twitter);
       this.$router.push("/");
     },

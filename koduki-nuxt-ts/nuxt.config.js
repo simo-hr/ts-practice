@@ -1,3 +1,4 @@
+const { FIREBASE_AUTH_API_KEY, FIREBASE_AUTH_DOMAIN } = process.env;
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -48,5 +49,24 @@ export default {
   build: {},
   firebase: {
     // options
+  },
+  // Set Runtime Configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config
+  publicRuntimeConfig: {
+    firebase: {
+      apiKey:
+        process.env.NODE_ENV !== "production"
+          ? process.env.FIREBASE_AUTH_API_KEY
+          : undefined,
+      authDomain:
+        process.env.NODE_ENV !== "production"
+          ? process.env.FIREBASE_AUTH_DOMAIN
+          : undefined,
+    },
+  },
+  privateRuntimeConfig: {
+    firebase: {
+      apiKey: FIREBASE_AUTH_API_KEY,
+      authDomain: FIREBASE_AUTH_DOMAIN,
+    },
   },
 };
