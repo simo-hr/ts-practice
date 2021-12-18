@@ -1,12 +1,12 @@
 export default class World {
-  message: string;
+  message: string
   constructor(message: string) {
-    this.message = message;
+    this.message = message
   }
 
   public sayHello(elem: HTMLElement | null) {
     if (elem) {
-      elem.innerText = this.message;
+      elem.innerText = this.message
     }
   }
 }
