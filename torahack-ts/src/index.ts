@@ -35,3 +35,7 @@
 // import arraySample from './array/array'
 // arraySample()
 // tupleSample()
+import genericAdvancedSample from './generics/advanced'
+import genericsBasicSample from './generics/basic'
+genericsBasicSample()
+genericAdvancedSample()
