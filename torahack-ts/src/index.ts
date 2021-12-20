@@ -39,5 +39,13 @@
 // import genericsBasicSample from './generics/basic'
 // genericsBasicSample()
 // genericAdvancedSample()
-import interfaceSample from './interface/interface'
-interfaceSample()
+// import interfaceSample from './interface/interface'
+// interfaceSample()
+
+// import callbackSample from './asynchronous/callback'
+// callbackSample()
+
+// import promiseSample from './asynchronous/promise'
+// promiseSample()
+import asyncAwaitSample from './asynchronous/asyncAwait'
+asyncAwaitSample()
