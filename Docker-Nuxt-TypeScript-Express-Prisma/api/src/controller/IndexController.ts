@@ -1,10 +1,10 @@
-import { Router, Request, Response } from 'express';
+import { Router, Request, Response } from 'express'
 
-const router = Router();
+const router = Router()
 
 // GET /api
-router.get('/', async (req: Request, res: Response) => {
-  res.status(200).json('hello world!');
-});
+router.get('/', async (_req: Request, res: Response) => {
+  res.status(200).json('hello world!')
+})
 
-export default router;
+export default router

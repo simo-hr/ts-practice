@@ -15,11 +15,9 @@ export default defineComponent({
     const data = ref({})
     const { $axios } = useContext()
     useAsync(async () => {
-      const result = await $axios.$get('/api')
+      const result: string = await $axios.$get('/api')
       data.value = result
     })
-    console.log(data)
-
     return { data }
   },
 })
