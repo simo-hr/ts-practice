@@ -1,0 +1,136 @@
+{
+    "config": {
+        "isRandom": true,
+        "mode": 2
+    },
+    "results": [
+        {
+            "meta": "allCorrect",
+            "image": "sample.png",
+            "statement": "全問正解！",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "url": "https://twitter.com/intent/tweet?text=%E7%B5%90%E6%9E%9C%E3%82%92%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%EF%BC%81"
+                },
+                {
+                    "statement": "キャンペーンサイトを見る",
+                    "url": "https://twitter.com/home"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "url": "https://twitter.com/intent/follow?screen_name=SH96810505"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "incorrect",
+            "image": "sample.png",
+            "statement": "ざんねん！不正解！",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "url": "https://twitter.com/intent/tweet?text=%E7%B5%90%E6%9E%9C%E3%82%92%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%EF%BC%81"
+                },
+                {
+                    "statement": "キャンペーンサイトを見る",
+                    "url": "https://twitter.com/home"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "url": "https://twitter.com/intent/follow?screen_name=SH96810505"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "correct",
+            "image": "sample.png",
+            "statement": "あなたは{$1}問中{$2}問正解しました。",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "url": "https://twitter.com/intent/tweet?text=%E7%B5%90%E6%9E%9C%E3%82%92%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%EF%BC%81"
+                },
+                {
+                    "statement": "キャンペーンサイトを見る",
+                    "url": "https://twitter.com/home"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "url": "https://twitter.com/intent/follow?screen_name=SH96810505"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        }
+    ],
+    "questions": [
+        {
+            "image": "sample.png",
+            "statement": "りんごは英語でなんという？",
+            "choices": [
+                {
+                    "statement": "Apple",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "Grape"
+                },
+                {
+                    "statement": "Strawberry"
+                },
+                {
+                    "statement": "Melon"
+                },
+                {
+                    "statement": "Peach"
+                }
+            ]
+        },
+        {
+            "image": "sample.png",
+            "statement": "ワンと鳴くのはどれ？",
+            "choices": [
+                {
+                    "statement": "ゴリラ"
+                },
+                {
+                    "statement": "猫"
+                },
+                {
+                    "statement": "犬",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "象"
+                }
+            ]
+        },
+        {
+            "image": "sample.png",
+            "statement": "冷たいものはどれ？",
+            "choices": [
+                {
+                    "statement": "こたつ"
+                },
+                {
+                    "statement": "おでん"
+                },
+                {
+                    "statement": "アイス",
+                    "meta": "correct"
+                }
+            ]
+        }
+    ]
+}
