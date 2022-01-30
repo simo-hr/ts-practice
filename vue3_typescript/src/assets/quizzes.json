@@ -1,48 +1,42 @@
 {
     "config": {
         "isRandom": true,
-        "mode": 2
+        "mode": 2,
+        "twitter_screen_name": "SH96810505",
+        "twitter_share_text": {
+            "all_correct": "全問正解\n${URL}",
+            "incorrect": " 残念不正解\n${URL}",
+            "score": "あなたの結果は${SCORE}点でした\n${URL}"
+        }
     },
     "results": [
         {
-            "meta": "allCorrect",
-            "image": "sample.png",
+            "meta": "all_correct",
+            "image": "result_all_correct.png",
             "statement": "全問正解！",
             "choices": [
                 {
                     "statement": "診断結果をツイートする",
-                    "url": "https://twitter.com/intent/tweet?text=%E7%B5%90%E6%9E%9C%E3%82%92%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%EF%BC%81"
-                },
-                {
-                    "statement": "キャンペーンサイトを見る",
-                    "url": "https://twitter.com/home"
+                    "meta": "share"
                 },
                 {
                     "statement": "アカウントをフォローする",
-                    "url": "https://twitter.com/intent/follow?screen_name=SH96810505"
-                },
-                {
-                    "statement": "もう一度チャレンジする",
-                    "meta": "retry"
+                    "meta": "follow"
                 }
             ]
         },
         {
             "meta": "incorrect",
-            "image": "sample.png",
+            "image": "result_incorrect.png",
             "statement": "ざんねん！不正解！",
             "choices": [
                 {
                     "statement": "診断結果をツイートする",
-                    "url": "https://twitter.com/intent/tweet?text=%E7%B5%90%E6%9E%9C%E3%82%92%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%EF%BC%81"
-                },
-                {
-                    "statement": "キャンペーンサイトを見る",
-                    "url": "https://twitter.com/home"
+                    "meta": "share"
                 },
                 {
                     "statement": "アカウントをフォローする",
-                    "url": "https://twitter.com/intent/follow?screen_name=SH96810505"
+                    "meta": "follow"
                 },
                 {
                     "statement": "もう一度チャレンジする",
@@ -51,21 +45,188 @@
             ]
         },
         {
-            "meta": "correct",
-            "image": "sample.png",
-            "statement": "あなたは{$1}問中{$2}問正解しました。",
+            "meta": "result_0",
+            "image": "result_00.png",
+            "statement": "あなたは10問中0問正解しました。\nもっと頑張りましょう",
             "choices": [
                 {
                     "statement": "診断結果をツイートする",
-                    "url": "https://twitter.com/intent/tweet?text=%E7%B5%90%E6%9E%9C%E3%82%92%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%EF%BC%81"
-                },
-                {
-                    "statement": "キャンペーンサイトを見る",
-                    "url": "https://twitter.com/home"
+                    "meta": "share"
                 },
                 {
                     "statement": "アカウントをフォローする",
-                    "url": "https://twitter.com/intent/follow?screen_name=SH96810505"
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_1",
+            "image": "result_01.png",
+            "statement": "あなたは10問中1問正解しました。\nもっと頑張りましょう",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_2",
+            "image": "result_02.png",
+            "statement": "あなたは10問中2問正解しました。\nもっと頑張りましょう",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_3",
+            "image": "result_03.png",
+            "statement": "あなたは10問中3問正解しました。\nもっと頑張りましょう",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_4",
+            "image": "result_04.png",
+            "statement": "あなたは10問中4問正解しました。\nもっと頑張りましょう",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_5",
+            "image": "result_05.png",
+            "statement": "あなたは10問中5問正解しました。\nもっと頑張りましょう",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_6",
+            "image": "result_06.png",
+            "statement": "あなたは10問中6問正解しました。\nもう少しで全問正解",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_7",
+            "image": "result_07.png",
+            "statement": "あなたは10問中7問正解しました。\nもう少しで全問正解",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_8",
+            "image": "result_08.png",
+            "statement": "あなたは10問中8問正解しました。\nもう少しで全問正解",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
+                },
+                {
+                    "statement": "もう一度チャレンジする",
+                    "meta": "retry"
+                }
+            ]
+        },
+        {
+            "meta": "result_9",
+            "image": "result_09.png",
+            "statement": "あなたは10問中9問正解しました。\nもう少しで全問正解",
+            "choices": [
+                {
+                    "statement": "診断結果をツイートする",
+                    "meta": "share"
+                },
+                {
+                    "statement": "アカウントをフォローする",
+                    "meta": "follow"
                 },
                 {
                     "statement": "もう一度チャレンジする",
@@ -76,7 +237,7 @@
     ],
     "questions": [
         {
-            "image": "sample.png",
+            "image": "question_01.png",
             "statement": "りんごは英語でなんという？",
             "choices": [
                 {
@@ -98,7 +259,7 @@
             ]
         },
         {
-            "image": "sample.png",
+            "image": "question_02.png",
             "statement": "ワンと鳴くのはどれ？",
             "choices": [
                 {
@@ -117,18 +278,151 @@
             ]
         },
         {
-            "image": "sample.png",
-            "statement": "冷たいものはどれ？",
+            "image": "question_03.png",
+            "statement": "冷たいのものはどれ？",
             "choices": [
-                {
-                    "statement": "こたつ"
-                },
                 {
                     "statement": "おでん"
                 },
                 {
                     "statement": "アイス",
                     "meta": "correct"
+                },
+                {
+                    "statement": "こたつ"
+                }
+            ]
+        },
+        {
+            "image": "question_04.png",
+            "statement": "ABCに続くのは？",
+            "choices": [
+                {
+                    "statement": "E"
+                },
+                {
+                    "statement": "A"
+                },
+                {
+                    "statement": "F"
+                },
+                {
+                    "statement": "D",
+                    "meta": "correct"
+                }
+            ]
+        },
+        {
+            "image": "question_05.png",
+            "statement": "沖縄の県庁所在地は？",
+            "choices": [
+                {
+                    "statement": "沖縄"
+                },
+                {
+                    "statement": "那覇",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "奄美"
+                },
+                {
+                    "statement": "美ら海"
+                }
+            ]
+        },
+        {
+            "image": "question_06.png",
+            "statement": "ピカチュウは何タイプ？",
+            "choices": [
+                {
+                    "statement": "電気",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "草"
+                },
+                {
+                    "statement": "ゴースト"
+                },
+                {
+                    "statement": "水"
+                }
+            ]
+        },
+        {
+            "image": "question_07.png",
+            "statement": "チョコレートの原料は？",
+            "choices": [
+                {
+                    "statement": "栗"
+                },
+                {
+                    "statement": "ごま"
+                },
+                {
+                    "statement": "どんぐり"
+                },
+                {
+                    "statement": "カカオ",
+                    "meta": "correct"
+                }
+            ]
+        },
+        {
+            "image": "question_08.png",
+            "statement": "令和元年は西暦何年?",
+            "choices": [
+                {
+                    "statement": "2018"
+                },
+                {
+                    "statement": "2019",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "2020"
+                },
+                {
+                    "statement": "2021"
+                }
+            ]
+        },
+        {
+            "image": "question_09.png",
+            "statement": "年を取ると上昇するものは？",
+            "choices": [
+                {
+                    "statement": "基礎代謝"
+                },
+                {
+                    "statement": "血糖値",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "肺活量"
+                },
+                {
+                    "statement": "筋肉量"
+                }
+            ]
+        },
+        {
+            "image": "question_10.png",
+            "statement": "初代総理大臣は？",
+            "choices": [
+                {
+                    "statement": "松本人志"
+                },
+                {
+                    "statement": "伊達政宗"
+                },
+                {
+                    "statement": "伊藤博文",
+                    "meta": "correct"
+                },
+                {
+                    "statement": "坂本龍馬"
                 }
             ]
         }
