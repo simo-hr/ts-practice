@@ -1,14 +1,23 @@
-import { Status, Task } from './Task'
+import { Status, Task, TaskObject } from './Task'
+
+const STORAGE_KEY = 'TASKS'
 
 export class TaskCollection {
-  private tasks: Task[] = []
+  private readonly storage
+  private tasks
 
+  constructor() {
+    this.storage = window.localStorage
+    this.tasks = this.getStorageTasks()
+  }
   add(task: Task) {
     this.tasks.push(task)
+    this.updateStorage()
   }
 
   delete(task: Task) {
     this.tasks = this.tasks.filter(({ id }) => id !== task.id)
+    this.updateStorage()
   }
 
   find(id: string) {
@@ -24,5 +33,45 @@ export class TaskCollection {
 
   filter(filterStatus: Status) {
     return this.tasks.filter(({ status }) => status === filterStatus)
+  }
+
+  private updateStorage() {
+    this.storage.setItem(STORAGE_KEY, JSON.stringify(this.tasks))
+  }
+  private getStorageTasks(): Task[] {
+    const jsonString = this.storage.getItem(STORAGE_KEY)
+    if (!jsonString) return []
+    try {
+      const storedTasks = JSON.parse(jsonString)
+      assertIsTaskObjects(storedTasks)
+      const tasks = storedTasks.map((task) => new Task(task))
+      return tasks
+    } catch (error) {
+      this.storage.removeItem(STORAGE_KEY)
+      return []
+    }
+  }
+
+  moveAboveTarget(task: Task, target: Task) {
+    const taskIndex = this.tasks.indexOf(task)
+    const targetIndex = this.tasks.indexOf(target)
+    this.changeOrder(task, taskIndex, taskIndex < targetIndex ? taskIndex - 1 : targetIndex)
+  }
+
+  moveToLast(task: Task) {
+    const taskIndex = this.tasks.indexOf(task)
+    this.changeOrder(task, taskIndex, this.tasks.length)
+  }
+
+  private changeOrder(task: Task, taskIndex: number, targetIndex: number) {
+    this.tasks.splice(taskIndex, 1)
+    this.tasks.splice(targetIndex, 0, task)
+    this.updateStorage()
+  }
+}
+
+function assertIsTaskObjects(value: any): asserts value is TaskObject[] {
+  if (!Array.isArray(value) || !value.every((item) => Task.validate(item))) {
+    throw new Error(`引数${value}はTaskObject型と一致しません。`)
   }
 }
