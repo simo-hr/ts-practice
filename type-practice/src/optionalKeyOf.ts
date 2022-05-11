@@ -1,3 +1,7 @@
+export type OptionalKeyOf<T extends object> = {
+  [K in keyof T]: T extends Record<K, T[K]> ? never : K
+}[keyof T]
+
 type Data = {
   foo: string
   bar?: number
@@ -5,10 +9,6 @@ type Data = {
   hoge: undefined
   piyo?: undefined
 }
-
-type OptionalKeyOf<T extends object> = {
-  [K in keyof T]: T extends Record<K, T[K]> ? never : K
-}[keyof T]
 
 type Sample1 = Data extends Record<'foo', Data['foo']> ? never : 'aiye'
 type Sample2 = Record<'foo', Data['foo']>

@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "TypeScript: Current File",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "runtimeArgs": [
+        "--nolazy",
+        "-r",
+        "tsconfig-paths/register",
+        "-r",
+        "ts-node/register/transpile-only"
+      ],
+      "env": {
+        "TS_NODE_COMPILER_OPTIONS": "{\"module\":\"commonjs\"}"
+      },
+      "envFile": "${workspaceRoot}/.env",
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceRoot}/node_modules/**"
+      ]
+    }
+  ]
+}
